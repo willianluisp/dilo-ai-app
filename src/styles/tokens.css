@@ -1,0 +1,10 @@
+:root { --action:#20846f; --action-hover:#196d5c; --accent:#3eb489; --mint:#bfe8d0; --surface-mint:#eaf7ef; --ink:#173d35; --surface:#fff; --input:#fcfdfc; --secondary:#526d64; --muted:#697e75; --border:#e3ebe6; --border-input:#d8e2dc; --error:#a83c35; --font-heading:'Manrope',sans-serif; --font-body:'Inter',sans-serif; font-family:var(--font-body); color:var(--ink); background:var(--surface); font-synthesis:none; text-rendering:optimizeLegibility; -webkit-font-smoothing:antialiased; }
+* { box-sizing:border-box; }
+body { margin:0; min-width:0; }
+button,input { font:inherit; }
+button,a,input { -webkit-tap-highlight-color:transparent; }
+button:focus-visible,a:focus-visible { outline:3px solid var(--action); outline-offset:4px; }
+button { touch-action:manipulation; }
+::selection { background:var(--mint); color:var(--ink); }
+@media(prefers-reduced-motion:reduce) { *,*::before,*::after { animation:none!important; transition:none!important; scroll-behavior:auto!important; } }
+

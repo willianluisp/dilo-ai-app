@@ -1,0 +1,27 @@
+.shell { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); min-height:100svh; }
+.brandPanel { background:var(--surface-mint); padding:40px clamp(28px,4vw,64px); display:grid; grid-template-rows:auto 1fr auto; position:relative; overflow:hidden; }
+.brandPanel::before { content:''; width:min(34vw,510px); aspect-ratio:1; border:1px solid #20846f12; border-radius:50%; position:absolute; right:-18%; top:34%; pointer-events:none; }
+.brandPanel::after { content:''; width:8px; height:8px; border-radius:50%; background:var(--accent); opacity:.45; position:absolute; left:14%; bottom:17%; }
+.brandHeader { line-height:1; }
+.brandContent { align-self:center; text-align:center; padding:34px 0 22px; position:relative; z-index:1; }
+.mascotFrame { width:clamp(260px,27vw,370px); max-width:100%; margin:auto; position:relative; }
+.mascotFrame::before { content:''; position:absolute; inset:15% 4% 0; background:#3eb48916; border-radius:50%; filter:blur(23px); }
+.brandContent h1 { font-family:var(--font-heading); font-size:clamp(32px,3.3vw,48px); font-weight:700; letter-spacing:-1.8px; line-height:1.17; margin:36px 0 0; text-wrap:balance; }
+.brandContent h1 span { color:var(--action); }
+.brandCopy { max-width:420px; margin:auto; }
+.brandCopy p { color:var(--secondary); font-size:15px; line-height:1.7; margin:18px auto 0; max-width:365px; text-wrap:pretty; }
+.main { display:flex; align-items:center; justify-content:center; padding:48px clamp(28px,5vw,80px); }
+.formArea { width:100%; max-width:388px; min-width:0; }
+@media(max-width:760px) {
+  .shell { display:flex; flex-direction:column; }
+  .brandPanel { padding:20px 24px 20px; display:block; }
+  .brandPanel::before, .brandPanel::after { display:none; }
+  .brandContent { padding:0; margin-top:-18px; }
+  .mascotFrame { width:112px; }
+  .brandContent h1 { font-size:19px; letter-spacing:-.6px; margin:8px 0 0; }
+  .brandContent h1 br { display:none; }
+  .brandCopy p { font-size:12px; line-height:1.5; margin-top:8px; max-width:300px; }
+  .main { padding:30px 24px 24px; flex:1; }
+}
+@media(max-width:360px) { .brandPanel { padding-inline:20px; } .main { padding:26px 20px 20px; } }
+

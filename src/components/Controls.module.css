@@ -1,0 +1,20 @@
+.primary { width:100%; min-height:54px; border:0; border-radius:12px; padding:16px 20px; background:var(--action); color:white; display:flex; align-items:center; justify-content:center; gap:12px; font-weight:600; cursor:pointer; box-shadow:0 4px 9px #173d3510; transition:background .18s,transform .18s; }
+.primary:hover { background:var(--action-hover); }
+.primary:active { transform:translateY(1px); }
+.primary:disabled { opacity:.65; cursor:wait; }
+.field { display:grid; gap:9px; }
+.field label { font-size:14px; font-weight:600; }
+.inputWrap { position:relative; }
+.inputWrap input { width:100%; height:54px; border:1px solid var(--border-input); border-radius:12px; background:var(--input); color:var(--ink); padding:0 16px; font:inherit; transition:border-color .18s,box-shadow .18s; }
+.inputWrap input[type=password], .inputWrap input[name=password] { padding-right:52px; }
+.inputWrap input::placeholder { color:var(--muted); }
+.inputWrap input:hover { border-color:#94b7ac; }
+.inputWrap input:focus { outline:0; border-color:var(--action); box-shadow:0 0 0 3px #20846f18; }
+.inputWrap input[aria-invalid=true] { border-color:var(--error); }
+.eye { position:absolute; right:5px; top:5px; height:44px; width:44px; display:grid; place-items:center; border:0; border-radius:8px; background:transparent; color:var(--secondary); cursor:pointer; }
+.eye:hover { background:var(--surface-mint); }
+.error { color:var(--error); font-size:13px; margin:0; }
+.feedback { display:flex; gap:10px; align-items:flex-start; background:var(--surface-mint); border:1px solid #20846f24; border-radius:12px; padding:14px; font-size:13px; line-height:1.6; }
+.feedback svg { flex-shrink:0; margin-top:2px; }
+.feedback strong { font-weight:600; }
+.feedback p { margin:3px 0 0; color:var(--secondary); }

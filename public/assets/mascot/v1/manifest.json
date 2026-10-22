@@ -1,0 +1,88 @@
+{
+  "version": "1.0.0-draft",
+  "status": "awaiting-layered-artwork",
+  "coordinateSystem": {
+    "canvas": { "width": 1024, "height": 1024, "unit": "px" },
+    "origin": "top-left",
+    "alpha": "straight",
+    "rule": "Every layer uses the full 1024x1024 canvas and preserves the approved master framing."
+  },
+  "references": {
+    "preservedOriginal": "../reference/dilo-mascote-original-210x194.png",
+    "incomingMaster": "../reference/dilo-mascote-master-reference.png",
+    "fallback": "../../dilo-mascote-original.png",
+    "incomingMasterStatus": "not-yet-provided"
+  },
+  "renderOrder": [
+    { "id": "arm-left", "zIndex": 10, "role": "behind-head" },
+    { "id": "arm-right", "zIndex": 11, "role": "behind-head" },
+    { "id": "head-base", "zIndex": 20, "role": "base" },
+    { "id": "eye-left", "zIndex": 30, "role": "eye" },
+    { "id": "eye-right", "zIndex": 31, "role": "eye" },
+    { "id": "pupil-left", "zIndex": 40, "role": "tracking" },
+    { "id": "pupil-right", "zIndex": 41, "role": "tracking" },
+    { "id": "eyelid-left", "zIndex": 50, "role": "blink" },
+    { "id": "eyelid-right", "zIndex": 51, "role": "blink" },
+    { "id": "hand-shadow", "zIndex": 60, "role": "contact-shadow" },
+    { "id": "hand-left", "zIndex": 70, "role": "password-pose" },
+    { "id": "hand-right", "zIndex": 71, "role": "password-pose" }
+  ],
+  "pivots": {
+    "head-base": null,
+    "eye-left": null,
+    "eye-right": null,
+    "pupil-left": null,
+    "pupil-right": null,
+    "eyelid-left": null,
+    "eyelid-right": null,
+    "arm-left": null,
+    "arm-right": null,
+    "hand-left": null,
+    "hand-right": null,
+    "rule": "Values are intentionally null until the approved final layers are audited on the shared canvas."
+  },
+  "pupilBounds": {
+    "left": null,
+    "right": null,
+    "rule": "Each bound is a final mask or ellipse derived from the matching eyeball artwork; do not infer it from the 210x194 PNG."
+  },
+  "states": {
+    "idle": ["head-base", "eye-left", "eye-right", "pupil-left", "pupil-right"],
+    "tracking": ["head-base", "eye-left", "eye-right", "pupil-left", "pupil-right"],
+    "passwordHidden": ["head-base", "hand-shadow", "hand-left", "hand-right"],
+    "passwordVisible": ["head-base", "eye-left", "pupil-left", "hand-shadow", "hand-left", "hand-right"],
+    "success": ["head-base", "eye-left", "eye-right", "pupil-left", "pupil-right"],
+    "error": ["head-base", "eye-left", "eye-right", "pupil-left", "pupil-right"]
+  },
+  "files": {
+    "required": [
+      "head-base.png",
+      "eye-left.png",
+      "eye-right.png",
+      "pupil-left.png",
+      "pupil-right.png",
+      "eyelid-left.png",
+      "eyelid-right.png",
+      "arm-left.png",
+      "arm-right.png",
+      "hand-left.png",
+      "hand-right.png",
+      "hand-shadow.png",
+      "mask-eye-left.svg",
+      "mask-eye-right.svg"
+    ],
+    "optional": [
+      "pose-happy.png",
+      "pose-curious.png",
+      "pose-blink-mid.png",
+      "pose-password-hidden.png",
+      "pose-password-visible.png"
+    ]
+  },
+  "validation": [
+    "No layer may include a baked page background.",
+    "No layer may change the approved camera angle, lighting, scale or character proportions.",
+    "All layer edges must be inspected over light and dark checkerboards before integration.",
+    "Final pivot and pupil-bound data requires an artwork audit and is not guessed in this draft."
+  ]
+}
