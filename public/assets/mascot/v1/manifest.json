@@ -11,7 +11,11 @@
     "preservedOriginal": "../reference/dilo-mascote-original-210x194.png",
     "incomingMaster": "../reference/dilo-mascote-master-reference.png",
     "fallback": "../../dilo-mascote-original.png",
-    "incomingMasterStatus": "not-yet-provided"
+    "incomingMasterStatus": "provided-and-approved-composed-png",
+    "approvedComposedPoses": {
+      "passwordHidden": "../reference/dilo-senha-oculta.png",
+      "passwordVisible": "../reference/dilo-senha-visivel.png"
+    }
   },
   "renderOrder": [
     { "id": "arm-left", "zIndex": 10, "role": "behind-head" },

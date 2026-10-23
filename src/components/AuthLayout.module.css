@@ -1,7 +1,6 @@
 .shell { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); min-height:100svh; }
 .brandPanel { background:var(--surface-mint); padding:40px clamp(28px,4vw,64px); display:grid; grid-template-rows:auto 1fr auto; position:relative; overflow:hidden; }
 .brandPanel::before { content:''; width:min(34vw,510px); aspect-ratio:1; border:1px solid #20846f12; border-radius:50%; position:absolute; right:-18%; top:34%; pointer-events:none; }
-.brandPanel::after { content:''; width:8px; height:8px; border-radius:50%; background:var(--accent); opacity:.45; position:absolute; left:14%; bottom:17%; }
 .brandHeader { line-height:1; }
 .brandContent { align-self:center; text-align:center; padding:34px 0 22px; position:relative; z-index:1; }
 .mascotFrame { width:clamp(260px,27vw,370px); max-width:100%; margin:auto; position:relative; }
@@ -15,7 +14,7 @@
 @media(max-width:760px) {
   .shell { display:flex; flex-direction:column; }
   .brandPanel { padding:20px 24px 20px; display:block; }
-  .brandPanel::before, .brandPanel::after { display:none; }
+  .brandPanel::before { display:none; }
   .brandContent { padding:0; margin-top:-18px; }
   .mascotFrame { width:112px; }
   .brandContent h1 { font-size:19px; letter-spacing:-.6px; margin:8px 0 0; }

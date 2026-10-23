@@ -1,0 +1,26 @@
+{
+  "version": "2.0.0",
+  "status": "pupil-tracking-ready",
+  "coordinateSystem": { "canvas": { "width": 1254, "height": 1254, "unit": "px" }, "origin": "top-left", "alpha": "straight" },
+  "layers": {
+    "headBase": "head-base.png",
+    "pupilLeft": "pupil-left.png",
+    "pupilRight": "pupil-right.png",
+    "maskEyeLeft": "mask-eye-left.svg",
+    "maskEyeRight": "mask-eye-right.svg"
+  },
+  "pupilTravelPixels": {
+    "left": {
+      "x": { "min": -16, "max": 4 },
+      "y": { "min": -12, "max": 5 },
+      "rule": "Measured safe range from neutral alpha bounds and the left-eye mask. The neutral pupil is biased toward the right edge."
+    },
+    "right": {
+      "x": { "min": -15, "max": 15 },
+      "y": { "min": -10, "max": 3 },
+      "rule": "Measured safe range from neutral alpha bounds and the right-eye mask. Downward travel is limited by the snout overlap."
+    },
+    "rule": "Values use the shared 1254px canvas. The renderer converts them to canvas-relative percentages."
+  },
+  "pending": ["eyelid-left", "eyelid-right", "blink poses"]
+}

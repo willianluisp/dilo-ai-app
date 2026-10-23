@@ -1,0 +1,10 @@
+.stage { position:relative; width:100%; aspect-ratio:1; }
+.restMotion { position:absolute; inset:0; transform-origin:50% 62%; }
+.poseLayer { position:absolute; inset:0; pointer-events:none; will-change:opacity; }
+.eyeMaskLeft, .eyeMaskRight { position:absolute; inset:0; overflow:hidden; pointer-events:none; }
+.eyeMaskLeft { -webkit-mask:url('/assets/mascot/v2/mask-eye-left.svg') center/100% 100% no-repeat; mask:url('/assets/mascot/v2/mask-eye-left.svg') center/100% 100% no-repeat; }
+.eyeMaskRight { -webkit-mask:url('/assets/mascot/v2/mask-eye-right.svg') center/100% 100% no-repeat; mask:url('/assets/mascot/v2/mask-eye-right.svg') center/100% 100% no-repeat; }
+.image { position:absolute; inset:0; width:100%; height:100%; object-fit:contain; display:block; user-select:none; }
+.pupil { position:absolute; inset:0; width:100%; height:100%; object-fit:contain; display:block; user-select:none; }
+.browLeft { position:absolute; inset:0; width:100%; height:100%; object-fit:contain; display:block; user-select:none; pointer-events:none; will-change:transform; }
+@media (prefers-reduced-motion: reduce) { .image { animation:none; } }
